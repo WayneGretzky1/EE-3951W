@@ -9,7 +9,7 @@ _**Detailed Specifications:**_
 
 The system should display the weight of a test weight, in grams, to the nearest gram. The range should be 0-1000 grams. The system should have an auto zero ("tare") button to correct for any offset error. Note that a 10-bit ADC only has 1024 quantization levels so the system cannot correct large offset errors by digital offsets. Power supplies may be batteries, USB power, or wall power - it's your choice. The final system should function independently (not be tethered to a laptop other than possibly for power). More details will be provided in class.
 
-**The Boring Stuff:**__
+_**The Boring Stuff:**_
 
 1. Since the analog portion of the circuit will be connected to the analog to digital converter on your PIC board, putting the analog circuit in a box is not necessary, but you should plan on having it mounted in a stable fashion to facilitate testing and demonstration, If you do choose to put the circuit in a box, we suggest the  Bud 750-1015 box or equivalent, available from the ECE Depot, but other creative solutions are fine too including 3D printed boxes (there seems to be a competition every semester for who can make the cutest box); that's fine, but don't obsess too much about the box. The whole thing should be reasonable sized (6” on a side or less), if you feel you need to make a bigger board/box, please consult your TA first.
 
