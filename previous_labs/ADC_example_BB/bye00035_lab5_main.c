@@ -6,7 +6,8 @@
  */
 
 #include "xc.h"
-#include "bye00035_lab5_cLib.h"
+#include "bye00035_adc_v001.h"
+#include "tonn0030_lab6_bufferLib_v001.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -24,25 +25,8 @@
 
 // use shift left command for part 2
 int main(int argc, char** argv) {
+    adc_init();
     
-    pic24_init();                                // set clock to 16MHz and all pins digital
-    lcd_init();                                  // initialize the LCD screen for future use
-    
-
-    const char myString[] = "Hello World!";
-    for (int i=0; i < 32; i++) {
-        lcd_printStr(myString);
-        shiftRight();
-        delay_ms(50);
-    }
-        lcd_cmd(0b00000001);                    // Clear Display
-//    lcd_setCursor(1,0);
-    for (int i=0; i < 32; i++) {
-        lcd_printStr(myString);
-        shiftRight();
-        delay_ms(50);
-    }
-            lcd_cmd(0b00000001);                    // Clear Display
     while(1);
 
     return (0);

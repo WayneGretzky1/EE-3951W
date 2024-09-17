@@ -6,15 +6,18 @@
             <name>WeightScale</name>
             <creation-uuid>09747578-314a-4d59-b3b4-8cdb8834b696</creation-uuid>
             <make-project-type>0</make-project-type>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>previous_labs/ADC_example_BB</sourceRootElem>
+                <sourceRootElem>previous_labs/buffer_lib_NT</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>default</name>
                     <type>2</type>
                 </confElem>
             </confList>
-            <sourceEncoding>ISO-8859-1</sourceEncoding>
             <formatting>
                 <project-formatting-style>false</project-formatting-style>
             </formatting>
