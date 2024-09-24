@@ -4,11 +4,15 @@
 
 void adc_init()
 {
-    TRISAbits.TRISA0 = 1;               // should be input by default
+    //TRISAbits.TRISA0 = 1;
+    TRISBbits.TRISB2 = 1;               // should be input by default
+    AD1CHS &= 0xFFF0;
+    AD1CHS |= 0x0004;
+    //AD1PCFGbits.PCFG0 = 0;
+    AD1PCFGbits.PCFG4 = 0;              // setup I/o as analog
     
-    AD1PCFGbits.PCFG0 = 0;              // setup I/o as analog
-    
-    AD1CON2bits.VCFG = 0b000;           // Use AVDD (3.3V) and AVSS (0V) as max/min
+    //AD1CON2bits.VCFG = 0b000;           // Use AVDD (3.3V) and AVSS (0V) as max/min
+    AD1CON2bits.VCFG = 0b011;           //VREF-,VREF+
     AD1CON3bits.ADCS = 0b011;           // You want TAD >= 75ns(Tcy = 62.5ns) (Currently A/D conversion clock as 3Tcy)
     AD1CON1bits.SSRC = 0b010;           // Sample on timer3 events (timer3 compare match)
     AD1CON3bits.SAMC = 0b00001;         // You want at least 1 auto sample time bit (currently assigned 1 auto sample)

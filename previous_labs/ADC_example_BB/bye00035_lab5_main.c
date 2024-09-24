@@ -7,7 +7,7 @@
 
 #include "xc.h"
 #include "bye00035_adc_v001.h"
-#include "tonn0030_lab6_bufferLib_v001.h"
+#include "bye00035_circularBuffer_v001.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -25,6 +25,7 @@
 
 // use shift left command for part 2
 int main(int argc, char** argv) {
+    
     adc_init();
     
     while(1);
