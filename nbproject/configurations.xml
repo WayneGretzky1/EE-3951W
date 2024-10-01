@@ -17,6 +17,8 @@
       <itemPath>previous_labs/ADC_example_BB/bye00035_adc_v001.c</itemPath>
       <itemPath>previous_labs/buffer_lib_NT/tonn0030_lab6_bufferLib_v001.c</itemPath>
       <itemPath>source_files/weightScale_main.c</itemPath>
+      <itemPath>previous_labs/LCD_Lib_NT/tonn0030_lab5_lcdLib_v001.c</itemPath>
+      <itemPath>previous_labs/LCD_Lib_NT/tonn0030_lab5_lcdLib_v001.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -28,6 +30,7 @@
     <Elem>previous_labs/ADC_example_BB</Elem>
     <Elem>previous_labs/buffer_lib_NT</Elem>
     <Elem>source_files</Elem>
+    <Elem>previous_labs/LCD_Lib_NT</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -1270,6 +1273,8 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-abfb"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/ntonn/OneDrive/Documents/School stuff/_WeightScale/EE-3951W/debug/default/default_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

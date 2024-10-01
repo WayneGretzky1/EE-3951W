@@ -12,6 +12,7 @@
                 <sourceRootElem>previous_labs/ADC_example_BB</sourceRootElem>
                 <sourceRootElem>previous_labs/buffer_lib_NT</sourceRootElem>
                 <sourceRootElem>source_files</sourceRootElem>
+                <sourceRootElem>previous_labs/LCD_Lib_NT</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
