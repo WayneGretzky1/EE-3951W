@@ -33,8 +33,8 @@ void adc_init()
 
     TMR3 = 0;                           // Setup timer3
     T3CON = 0;                          // Clear timer3 register
-    T3CONbits.TCKPS = 0b10;             // Pre-scaler (1:64)
-    PR3 = 15624;                        // Clk period (62.5ms, sampling 16 times per second)
+    T3CONbits.TCKPS = 0b00;             // Pre-scaler (1:1)
+    PR3 = 62499;                        // Clk period (3.91ms, sampling 256 times per second)
     T3CONbits.TON = 1;                  // Start timer3
 }
 

@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>previous_labs/ADC_example_BB/bye00035_adc_v001.h</itemPath>
       <itemPath>previous_labs/buffer_lib_NT/tonn0030_lab6_bufferLib_v001.h</itemPath>
+      <itemPath>previous_labs/LCD_Lib_NT/tonn0030_lab5_lcdLib_v001.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,7 +19,8 @@
       <itemPath>previous_labs/buffer_lib_NT/tonn0030_lab6_bufferLib_v001.c</itemPath>
       <itemPath>source_files/weightScale_main.c</itemPath>
       <itemPath>previous_labs/LCD_Lib_NT/tonn0030_lab5_lcdLib_v001.c</itemPath>
-      <itemPath>previous_labs/LCD_Lib_NT/tonn0030_lab5_lcdLib_v001.h</itemPath>
+      <itemPath>previous_labs/delay_functions_NT/tonn0030_lab_asmLib_delayfuncs.h</itemPath>
+      <itemPath>previous_labs/delay_functions_NT/tonn0030_lab_asmLib_delayfuncs.s</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -31,6 +33,7 @@
     <Elem>previous_labs/buffer_lib_NT</Elem>
     <Elem>source_files</Elem>
     <Elem>previous_labs/LCD_Lib_NT</Elem>
+    <Elem>previous_labs/delay_functions_NT</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

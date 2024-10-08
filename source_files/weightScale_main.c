@@ -8,6 +8,7 @@
 #include "xc.h"
 #include "../previous_labs/ADC_example_BB/bye00035_adc_v001.h"
 #include "../previous_labs/buffer_lib_NT/tonn0030_lab6_bufferLib_v001.h"
+#include "../previous_labs/LCD_Lib_NT/tonn0030_lab5_lcdLib_v001.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -37,21 +38,46 @@
  */
 
 volatile int test;
+volatile char time_to_refresh = 0;
+
 
 void __attribute__((interrupt, auto_psv)) _ADC1Interrupt()
 {
     _AD1IF = 0;
     putVal(ADC1BUF0);
-    test = getAvg();
+    time_to_refresh += 1;
 }
 
 
+void setup()
+{
+    initBuffer(4);
+    adc_init();
+    lcd_init();
+    lcd_moveCurser(0,0);
+    TMR3 = 0;
+    T3CON = 0;
+    T3CONbits.TCKPS = 0b10;
+    PR3 = 31250 - 1;
+    T3CONbits.TON = 1;
+}
 
 // use shift left command for part 2
 int main(int argc, char** argv) {
-    initBuffer(8);
-    adc_init();
-    while(1);
+    char adStr[20];
+    setup();
+    int adValue = getAvg();
+    while(1){
+        if(time_to_refresh >= 4){
+            adValue = getAvg();
+            sprintf(adStr, "%d", adValue);
+            lcd_clear();            
+            delayMs(2);
+            lcd_moveCurser(0,0);
+            lcd_printStr(adStr);
+            time_to_refresh = 0;
+        }
+    }
 
     return (0);
 }

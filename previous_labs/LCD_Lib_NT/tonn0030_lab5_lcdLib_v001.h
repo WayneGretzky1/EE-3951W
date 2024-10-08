@@ -19,9 +19,10 @@ extern "C" {
 void lcd_cmd(char Package);
 void lcd_clear(void);
 void lcd_init(void);
+void lcd_moveCurser(char row, char column);
 void lcd_printChar(char Package);
 void lcd_printStr(const char str[]);
-
+void delayMs(int ms);
 #ifdef	__cplusplus
 }
 #endif

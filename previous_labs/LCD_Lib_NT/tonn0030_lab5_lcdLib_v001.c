@@ -6,6 +6,17 @@
  */
 #include "xc.h"
 #include "tonn0030_lab5_lcdLib_v001.h"
+#include "../delay_functions_NT/tonn0030_lab_asmLib_delayfuncs.h"
+
+/**
+ * Simple delay function for use in the I2C functions
+ * @param ms number of milliseconds to wait
+ */
+void delayMs(int ms){
+    for(int i = 0; i < ms; i++){
+        nat_delay1ms();
+    }
+}
 
 /**
  * A function that moves the position of the LCD cursor to the specified location. 
@@ -34,20 +45,20 @@ void lcd_clear(void)
  */
 void lcd_printChar(char Package)
 {
-    I2C2CONbits.SEN = 1;
-    while(I2C2CONbits.SEN == 1);
-    IFS3bits.MI2C2IF = 0;
-    I2C2TRN = SLAVE_ADDR;
-    while(IFS3bits.MI2C2IF == 0);
-    IFS3bits.MI2C2IF = 0;
-    I2C2TRN = 0b01000000;
-    while(IFS3bits.MI2C2IF == 0);
-    IFS3bits.MI2C2IF = 0;
-    I2C2TRN = Package;
-    while(IFS3bits.MI2C2IF == 0);
-    IFS3bits.MI2C2IF = 0;
-    I2C2CONbits.PEN = 1;
-    while(I2C2CONbits.PEN == 1);
+    I2C1CONbits.SEN = 1;
+    while(I2C1CONbits.SEN == 1);
+    IFS1bits.MI2C1IF = 0;
+    I2C1TRN = SLAVE_ADDR;
+    while(IFS1bits.MI2C1IF == 0);
+    IFS1bits.MI2C1IF = 0;
+    I2C1TRN = 0b01000000;
+    while(IFS1bits.MI2C1IF == 0);
+    IFS1bits.MI2C1IF = 0;
+    I2C1TRN = Package;
+    while(IFS1bits.MI2C1IF == 0);
+    IFS1bits.MI2C1IF = 0;
+    I2C1CONbits.PEN = 1;
+    while(I2C1CONbits.PEN == 1);
 }
 
 /**
@@ -59,29 +70,29 @@ void lcd_printChar(char Package)
 void lcd_printStr(const char str[])
 {
     int i;
-    I2C2CONbits.SEN = 1;
-    while(I2C2CONbits.SEN == 1);
-    IFS3bits.MI2C2IF = 0;
-    I2C2TRN = SLAVE_ADDR;
-    while(IFS3bits.MI2C2IF == 0);
-    IFS3bits.MI2C2IF = 0;
+    I2C1CONbits.SEN = 1;
+    while(I2C1CONbits.SEN == 1);
+    IFS1bits.MI2C1IF = 0;
+    I2C1TRN = SLAVE_ADDR;
+    while(IFS1bits.MI2C1IF == 0);
+    IFS1bits.MI2C1IF = 0;
     for(i = 0; str[i+1] != '\0'; i++)
     {
-        I2C2TRN = 0b11000000;
-        while(IFS3bits.MI2C2IF == 0);
-        IFS3bits.MI2C2IF = 0;
-        I2C2TRN = str[i];
-        while(IFS3bits.MI2C2IF == 0);
-        IFS3bits.MI2C2IF = 0;
+        I2C1TRN = 0b11000000;
+        while(IFS1bits.MI2C1IF == 0);
+        IFS1bits.MI2C1IF = 0;
+        I2C1TRN = str[i];
+        while(IFS1bits.MI2C1IF == 0);
+        IFS1bits.MI2C1IF = 0;
     }
-    I2C2TRN = 0b01000000;
-    while(IFS3bits.MI2C2IF == 0);
-    IFS3bits.MI2C2IF = 0;
-    I2C2TRN = str[i];
-    while(IFS3bits.MI2C2IF == 0);
-    IFS3bits.MI2C2IF = 0;
-    I2C2CONbits.PEN = 1;
-    while(I2C2CONbits.PEN == 1);
+    I2C1TRN = 0b01000000;
+    while(IFS1bits.MI2C1IF == 0);
+    IFS1bits.MI2C1IF = 0;
+    I2C1TRN = str[i];
+    while(IFS1bits.MI2C1IF == 0);
+    IFS1bits.MI2C1IF = 0;
+    I2C1CONbits.PEN = 1;
+    while(I2C1CONbits.PEN == 1);
 }
 
 /**
@@ -91,20 +102,20 @@ void lcd_printStr(const char str[])
  */
 void lcd_cmd(char Package)
 {
-    I2C2CONbits.SEN = 1;
-    while(I2C2CONbits.SEN == 1);
-    IFS3bits.MI2C2IF = 0;
-    I2C2TRN = SLAVE_ADDR;
-    while(IFS3bits.MI2C2IF == 0);
-    IFS3bits.MI2C2IF = 0;
-    I2C2TRN = 0b00000000;
-    while(IFS3bits.MI2C2IF == 0);
-    IFS3bits.MI2C2IF = 0;
-    I2C2TRN = Package;
-    while(IFS3bits.MI2C2IF == 0);
-    IFS3bits.MI2C2IF = 0;
-    I2C2CONbits.PEN = 1;
-    while(I2C2CONbits.PEN == 1);
+    I2C1CONbits.SEN = 1;
+    while(I2C1CONbits.SEN == 1);
+    IFS1bits.MI2C1IF = 0;
+    I2C1TRN = SLAVE_ADDR;
+    while(IFS1bits.MI2C1IF == 0);
+    IFS1bits.MI2C1IF = 0;
+    I2C1TRN = 0b00000000;
+    while(IFS1bits.MI2C1IF == 0);
+    IFS1bits.MI2C1IF = 0;
+    I2C1TRN = Package;
+    while(IFS1bits.MI2C1IF == 0);
+    IFS1bits.MI2C1IF = 0;
+    I2C1CONbits.PEN = 1;
+    while(I2C1CONbits.PEN == 1);
 }
 
 /**
@@ -133,7 +144,7 @@ void lcd_config(void)
  */
 void lcd_init(void)
 {
-    I2C2BRG = 157;
-    I2C2CONbits.I2CEN = 1;
+    I2C1BRG = 157;
+    I2C1CONbits.I2CEN = 1;
     lcd_config();
 }
