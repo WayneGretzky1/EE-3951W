@@ -6,13 +6,14 @@
  */
 #include "xc.h"
 #include "tonn0030_lab6_bufferLib_v001.h"
+#include "string.h"
 #define ARRAY_SIZE 1024
 
 int buffer[ARRAY_SIZE];
 unsigned int currentPos = 0;
 unsigned int numElems = 0;
 unsigned int bufferSize;
-double avg = 0;
+char looped = 0;
 
 /**
  * putVal adds a new value to the buffer, then updates the moving average.
@@ -22,25 +23,13 @@ void putVal(int newValue)
 {
     buffer[currentPos] = newValue;
     currentPos++;
-    if(numElems < bufferSize)
-    {
-        numElems++;
-        avg = avg * ((double)(numElems-1)/numElems);
-        avg += (double)(newValue)/numElems;
-    }
-    else
-    {
-        avg += (double)(newValue)/bufferSize;
-        unsigned int tempIndex = currentPos - 1 - bufferSize;
-        if(tempIndex <0)
-        {
-            tempIndex += ARRAY_SIZE;
-        }
-        avg -= (double)(buffer[tempIndex])/bufferSize;
-    }
-    if(currentPos >= ARRAY_SIZE)
+    if(currentPos == ARRAY_SIZE)
     {
         currentPos = 0;
+        looped = 1;
+    }
+    if(currentPos >= bufferSize){
+        looped = 0;
     }
 }
 
@@ -51,7 +40,34 @@ void putVal(int newValue)
  */
 int getAvg(void)
 {
-    return (int)(avg + 0.5);
+    int sum = 0;
+    if(looped == 1)
+    {
+        for(int i = 0; i < currentPos; i++)
+        {
+            sum += buffer[i];
+        }
+        for(int i = ARRAY_SIZE - bufferSize + currentPos - 1; i < ARRAY_SIZE; i++)
+        {
+            sum += buffer[i];
+        }
+    }
+    else if(looped == 0 && currentPos < bufferSize)
+    {
+        for(int i = 0; i < currentPos; i++)
+        {
+            sum += buffer[i];
+        }
+    }
+    else
+    {
+        for(int i = currentPos - bufferSize; i < currentPos; i++)
+        {
+            sum += buffer[i];
+        }
+    }
+    
+    return sum/bufferSize;
 }
 
 /**
@@ -59,9 +75,9 @@ int getAvg(void)
  * buffer.
  * @param buffer_size the amount of data points to be averaged.
  */
-void initBuffer(unsigned int buffer_size)
+void initBuffer()
 {
-    bufferSize = buffer_size;
+    bufferSize = 6;
     for(int i = 0; i < ARRAY_SIZE; i++)
     {
         buffer[i] = 0;

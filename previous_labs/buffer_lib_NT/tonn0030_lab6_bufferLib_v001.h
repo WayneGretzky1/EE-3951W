@@ -16,7 +16,7 @@ extern "C" {
 
 void putVal(int newValue);
 int getAvg(void);
-void initBuffer(unsigned int buffer_size);
+void initBuffer();
 
 #ifdef	__cplusplus
 }

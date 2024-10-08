@@ -6,7 +6,7 @@ void adc_init()
 {
     //TRISAbits.TRISA0 = 1;
     TRISBbits.TRISB2 = 1;               // should be input by default
-    AD1CHS &= 0xFFF0;
+    AD1CHS &= 0x0000;
     AD1CHS |= 0x0004;
     //AD1PCFGbits.PCFG0 = 0;
     AD1PCFGbits.PCFG4 = 0;              // setup I/o as analog
