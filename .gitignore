@@ -31,3 +31,5 @@ nbproject/Makefile-*
 disassembly/
 .generated_files/
 .vscode
+*.mc3
+.DS_Store
