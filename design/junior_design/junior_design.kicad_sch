@@ -5490,6 +5490,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 147.32 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "24905437-0804-4bad-9fed-c5d69c289429")
+		(property "Reference" "#PWR0101"
+			(at 147.32 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 147.32 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 147.32 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c107baaa-83ec-46f5-9b3f-7dee6739a472")
+		)
+		(instances
+			(project "junior_design"
+				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 44.45 149.86 0)
 		(unit 1)
@@ -6272,72 +6338,6 @@
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
 					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 147.32 38.1 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4a0af26e-825f-4aeb-9bc4-2e13c178b158")
-		(property "Reference" "#PWR038"
-			(at 147.32 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 147.32 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 147.32 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 147.32 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 147.32 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "faf30ccf-0267-4789-a826-11ea474168f9")
-		)
-		(instances
-			(project "junior_design"
-				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -7364,7 +7364,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.81_1x04_P3.81mm_Vertical"
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_4-G-3.81_1x04_P3.81mm_Horizontal"
 			(at 24.13 146.05 0)
 			(effects
 				(font
