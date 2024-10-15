@@ -2690,6 +2690,88 @@
 				)
 			)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim yes)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
 		(symbol "PIC24FJ64GA002-I_SP:PIC24FJ64GA002-I_SP"
 			(pin_names
 				(offset 1.016)
@@ -3979,6 +4061,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 123.19) (xy 115.57 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3576735e-79d5-4d91-8fc5-2da16b0926bb")
+	)
+	(wire
+		(pts
 			(xy 240.03 111.76) (xy 245.11 111.76)
 		)
 		(stroke
@@ -4249,6 +4341,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 146.05) (xy 115.57 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b76b20e-a749-466b-85a2-e3e3a49c8528")
+	)
+	(wire
+		(pts
 			(xy 260.35 40.64) (xy 260.35 41.91)
 		)
 		(stroke
@@ -4489,6 +4591,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 151.13) (xy 115.57 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc9c33e6-e1a2-40d3-a765-156cc5340795")
+	)
+	(wire
+		(pts
 			(xy 29.21 86.36) (xy 29.21 85.09)
 		)
 		(stroke
@@ -4698,6 +4810,17 @@
 		)
 		(uuid "0f610cd2-52c9-4cec-adb7-7b92e1f92214")
 	)
+	(label "SDA0"
+		(at 105.41 151.13 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1fbda997-0a4e-4601-bda9-4495869df67e")
+	)
 	(label "PGC"
 		(at 252.73 119.38 180)
 		(fields_autoplaced yes)
@@ -4808,6 +4931,17 @@
 		)
 		(uuid "8741cae4-1cc7-48b0-8b1e-e47c8267b904")
 	)
+	(label "PWM0"
+		(at 105.41 123.19 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a2e12518-3817-439a-b100-c257f631c32a")
+	)
 	(label "LDCELL+"
 		(at 39.37 140.97 180)
 		(fields_autoplaced yes)
@@ -4874,6 +5008,17 @@
 		)
 		(uuid "dad24067-cf88-4715-847b-1c91fa4d8caf")
 	)
+	(label "SCL0"
+		(at 105.41 146.05 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dcbec078-5946-4bd0-825f-9bbb45b7a7b5")
+	)
 	(symbol
 		(lib_id "power:GND")
 		(at 31.75 115.57 0)
@@ -4935,6 +5080,70 @@
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
 					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 52.07 189.23 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "06681814-30e9-43c3-8aa7-d7bc78a61f56")
+		(property "Reference" "H4"
+			(at 54.61 187.9599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 54.61 190.4999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm"
+			(at 52.07 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 52.07 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "junior_design"
+				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
+					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -5082,7 +5291,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "100d2f92-f013-4977-8597-aa67ad288798")
-		(property "Reference" "R6"
+		(property "Reference" "R101"
 			(at 109.22 71.12 90)
 			(effects
 				(font
@@ -5134,7 +5343,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "R6")
+					(reference "R101")
 					(unit 1)
 				)
 			)
@@ -5150,7 +5359,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18f11a95-30f5-4c25-b41e-655bb7a24b87")
-		(property "Reference" "R5"
+		(property "Reference" "R133"
 			(at 78.74 52.0699 0)
 			(effects
 				(font
@@ -5204,7 +5413,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "R5")
+					(reference "R133")
 					(unit 1)
 				)
 			)
@@ -5220,7 +5429,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20eec577-b5ea-4200-af80-9241351c3428")
-		(property "Reference" "C4"
+		(property "Reference" "C190"
 			(at 232.41 35.5599 0)
 			(effects
 				(font
@@ -5274,7 +5483,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "C4")
+					(reference "C190")
 					(unit 1)
 				)
 			)
@@ -5422,7 +5631,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2bcbda19-960a-4f60-90c2-608df432b9af")
-		(property "Reference" "J5"
+		(property "Reference" "J190"
 			(at 193.04 13.97 0)
 			(effects
 				(font
@@ -5519,7 +5728,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "J5")
+					(reference "J190")
 					(unit 1)
 				)
 			)
@@ -5600,7 +5809,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2d843bd2-fb86-4928-b56d-af166d5dd15a")
-		(property "Reference" "C9"
+		(property "Reference" "C121"
 			(at 148.844 39.116 0)
 			(effects
 				(font
@@ -5654,7 +5863,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "C9")
+					(reference "C121")
 					(unit 1)
 				)
 			)
@@ -5736,7 +5945,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "38835bd4-c7e4-4489-92cf-eae308408179")
-		(property "Reference" "R4"
+		(property "Reference" "R131"
 			(at 78.74 36.8299 0)
 			(effects
 				(font
@@ -5790,7 +5999,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "R4")
+					(reference "R131")
 					(unit 1)
 				)
 			)
@@ -5938,7 +6147,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3ea9182d-9c56-46db-bd3e-32ee99e8db59")
-		(property "Reference" "RV2"
+		(property "Reference" "RV130"
 			(at 66.04 46.99 0)
 			(effects
 				(font
@@ -5996,7 +6205,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "RV2")
+					(reference "RV130")
 					(unit 1)
 				)
 			)
@@ -6144,7 +6353,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4b3596a0-54e5-4428-843b-ad024756c7f5")
-		(property "Reference" "R3"
+		(property "Reference" "R132"
 			(at 66.04 52.0699 0)
 			(effects
 				(font
@@ -6198,7 +6407,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "R3")
+					(reference "R132")
 					(unit 1)
 				)
 			)
@@ -6214,7 +6423,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4c95c9fc-2975-4ef2-957b-99b3e513c669")
-		(property "Reference" "R8"
+		(property "Reference" "R190"
 			(at 213.36 34.2899 0)
 			(effects
 				(font
@@ -6268,7 +6477,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "R8")
+					(reference "R190")
 					(unit 1)
 				)
 			)
@@ -6350,7 +6559,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4eef195a-72d2-4cfa-9eba-44ce40436902")
-		(property "Reference" "U2"
+		(property "Reference" "U110"
 			(at 52.07 76.2314 0)
 			(effects
 				(font
@@ -6420,7 +6629,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "U2")
+					(reference "U110")
 					(unit 1)
 				)
 			)
@@ -6436,7 +6645,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5077f442-ec58-4c19-80fe-23bcccfda312")
-		(property "Reference" "C3"
+		(property "Reference" "C102"
 			(at 266.7 68.5799 0)
 			(effects
 				(font
@@ -6490,7 +6699,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "C3")
+					(reference "C102")
 					(unit 1)
 				)
 			)
@@ -6572,7 +6781,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "50efb5c5-9fda-49a6-88ac-7c06cb366e42")
-		(property "Reference" "J3"
+		(property "Reference" "J120"
 			(at 130.81 43.1799 0)
 			(effects
 				(font
@@ -6635,7 +6844,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "J3")
+					(reference "J120")
 					(unit 1)
 				)
 			)
@@ -6781,10 +6990,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5d374e79-4d1b-45cb-b83a-78e2bc314ff9")
-		(property "Reference" "RV1"
-			(at 73.66 44.4499 0)
+		(property "Reference" "RV131"
+			(at 73.66 44.704 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6841,7 +7049,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "RV1")
+					(reference "RV131")
 					(unit 1)
 				)
 			)
@@ -6857,7 +7065,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68dea52d-0612-4f44-ab5f-6a7edb10f155")
-		(property "Reference" "R2"
+		(property "Reference" "R130"
 			(at 66.04 36.8299 0)
 			(effects
 				(font
@@ -6911,7 +7119,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "R2")
+					(reference "R130")
 					(unit 1)
 				)
 			)
@@ -6993,7 +7201,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b5eea1a-84fe-4386-9da8-f85b5035f417")
-		(property "Reference" "U1"
+		(property "Reference" "U100"
 			(at 171.45 62.23 0)
 			(effects
 				(font
@@ -7009,7 +7217,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PIC24FJ64GA002-I_SP:DIP787W46P254L3467H508Q28"
+		(property "Footprint" "Package_DIP:DIP-28_W7.62mm"
 			(at 171.45 113.03 0)
 			(effects
 				(font
@@ -7124,7 +7332,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "U1")
+					(reference "U100")
 					(unit 1)
 				)
 			)
@@ -7140,7 +7348,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6c1f7f2c-200c-4090-b89d-14f34e2296a3")
-		(property "Reference" "J2"
+		(property "Reference" "J111"
 			(at 24.13 134.62 0)
 			(effects
 				(font
@@ -7198,7 +7406,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "J2")
+					(reference "J111")
 					(unit 1)
 				)
 			)
@@ -7337,6 +7545,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 52.07 182.88 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "751fe228-1aa9-422b-85d1-85b567b491af")
+		(property "Reference" "H2"
+			(at 54.61 181.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 54.61 184.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm"
+			(at 52.07 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 52.07 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "junior_design"
+				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 248.92 69.85 0)
 		(unit 1)
@@ -7346,7 +7618,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "79f707ae-0d41-438d-8e90-e9395f14c1d8")
-		(property "Reference" "C2"
+		(property "Reference" "C101"
 			(at 252.73 68.5799 0)
 			(effects
 				(font
@@ -7400,7 +7672,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "C2")
+					(reference "C101")
 					(unit 1)
 				)
 			)
@@ -7416,7 +7688,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7b99641f-ca86-4ba6-b61e-a859f2871579")
-		(property "Reference" "C5"
+		(property "Reference" "C191"
 			(at 264.16 35.5599 0)
 			(effects
 				(font
@@ -7470,7 +7742,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "C5")
+					(reference "C191")
 					(unit 1)
 				)
 			)
@@ -7684,7 +7956,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "82131ea6-7ee0-4fe6-ba47-50c1e954d95c")
-		(property "Reference" "R7"
+		(property "Reference" "R100"
 			(at 104.14 67.3099 0)
 			(effects
 				(font
@@ -7738,7 +8010,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "R7")
+					(reference "R100")
 					(unit 1)
 				)
 			)
@@ -7811,6 +8083,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 31.75 189.23 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "877ed220-e38c-4dbe-969d-9b2c718a8111")
+		(property "Reference" "H3"
+			(at 34.29 187.9599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 34.29 190.4999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm"
+			(at 31.75 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 31.75 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 31.75 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "junior_design"
+				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 219.71 35.56 0)
 		(unit 1)
@@ -7820,7 +8156,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8846f47f-ec6f-498b-a3fe-fff7ec3b5a70")
-		(property "Reference" "R9"
+		(property "Reference" "R191"
 			(at 222.25 34.2899 0)
 			(effects
 				(font
@@ -7874,7 +8210,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "R9")
+					(reference "R191")
 					(unit 1)
 				)
 			)
@@ -7890,7 +8226,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8a5fe936-8278-44be-8a46-d12f82ba6ff9")
-		(property "Reference" "C8"
+		(property "Reference" "C130"
 			(at 22.86 106.6799 0)
 			(effects
 				(font
@@ -7944,7 +8280,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "C8")
+					(reference "C130")
 					(unit 1)
 				)
 			)
@@ -7960,7 +8296,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8aabe082-51a2-465f-b15a-31c78b3f402a")
-		(property "Reference" "J1"
+		(property "Reference" "J100"
 			(at 235.585 104.14 0)
 			(effects
 				(font
@@ -8030,7 +8366,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "J1")
+					(reference "J100")
 					(unit 1)
 				)
 			)
@@ -8433,6 +8769,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 185.42 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b1b64797-cafe-4c98-91d0-42454ce10a25")
+		(property "Reference" "#PWR042"
+			(at 185.42 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 185.42 64.008 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 185.42 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 185.42 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aa84d477-f923-4c8a-8de6-d7a96027afc1")
+		)
+		(instances
+			(project "junior_design"
+				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
+					(reference "#PWR042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 39.37 74.93 0)
 		(unit 1)
@@ -8508,7 +8909,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bc319f66-4765-4fe2-a09e-71b9e2ef65a3")
-		(property "Reference" "C7"
+		(property "Reference" "C110"
 			(at 24.13 60.9599 0)
 			(effects
 				(font
@@ -8562,7 +8963,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "C7")
+					(reference "C110")
 					(unit 1)
 				)
 			)
@@ -8635,6 +9036,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 31.75 182.88 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c17f8ee4-f3a3-480d-a6e8-2a7732b75c79")
+		(property "Reference" "H1"
+			(at 34.29 181.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 34.29 184.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm"
+			(at 31.75 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 31.75 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 31.75 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "junior_design"
+				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Regulator_Linear:TLV76133DCY")
 		(at 245.11 31.75 0)
 		(unit 1)
@@ -8644,7 +9109,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c9ca2c6e-76e8-4492-bf09-50b7b77b39c6")
-		(property "Reference" "U3"
+		(property "Reference" "U190"
 			(at 245.11 25.4 0)
 			(effects
 				(font
@@ -8699,7 +9164,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "U3")
+					(reference "U190")
 					(unit 1)
 				)
 			)
@@ -8715,7 +9180,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cad9f48f-82d9-4a80-a86e-08086c95b497")
-		(property "Reference" "U4"
+		(property "Reference" "U130"
 			(at 78.74 110.49 0)
 			(effects
 				(font
@@ -8785,7 +9250,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "U4")
+					(reference "U130")
 					(unit 2)
 				)
 			)
@@ -8867,7 +9332,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cd765345-ae47-4b13-b842-3a1df3c3c756")
-		(property "Reference" "J4"
+		(property "Reference" "J121"
 			(at 168.91 40.6399 0)
 			(effects
 				(font
@@ -8924,7 +9389,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "J4")
+					(reference "J121")
 					(unit 1)
 				)
 			)
@@ -9138,7 +9603,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d5c4dfff-f7d3-4c93-9960-cbf4671e9bc4")
-		(property "Reference" "R1"
+		(property "Reference" "R110"
 			(at 27.94 81.2799 0)
 			(effects
 				(font
@@ -9192,7 +9657,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "R1")
+					(reference "R110")
 					(unit 1)
 				)
 			)
@@ -9340,7 +9805,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0f9436e-c795-4a1e-81db-4830b0511f4e")
-		(property "Reference" "U4"
+		(property "Reference" "U130"
 			(at 33.02 106.6799 0)
 			(effects
 				(font
@@ -9412,7 +9877,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "U4")
+					(reference "U130")
 					(unit 3)
 				)
 			)
@@ -9428,7 +9893,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e300243e-f980-4527-8338-86c74fde0dc7")
-		(property "Reference" "U4"
+		(property "Reference" "U130"
 			(at 78.74 85.09 0)
 			(effects
 				(font
@@ -9498,7 +9963,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "U4")
+					(reference "U130")
 					(unit 1)
 				)
 			)
@@ -9580,7 +10045,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e8d2a236-1461-4b27-9bc5-c1283715758c")
-		(property "Reference" "C6"
+		(property "Reference" "C111"
 			(at 57.15 143.5099 0)
 			(effects
 				(font
@@ -9634,7 +10099,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "C6")
+					(reference "C111")
 					(unit 1)
 				)
 			)
@@ -9650,7 +10115,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e94bf63a-b20a-49d3-921e-a3b730d4d7bd")
-		(property "Reference" "C1"
+		(property "Reference" "C100"
 			(at 240.03 81.2799 0)
 			(effects
 				(font
@@ -9704,7 +10169,7 @@
 		(instances
 			(project "junior_design"
 				(path "/579d38b9-dfd2-4e74-84d9-ad5d94ed0bf7"
-					(reference "C1")
+					(reference "C100")
 					(unit 1)
 				)
 			)
