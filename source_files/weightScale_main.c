@@ -39,19 +39,25 @@
 
 volatile int test;
 volatile char time_to_refresh = 0;
-
-
+volatile uint16_t ADCValue = 0;
+volatile int *ADC16Ptr;
 void __attribute__((interrupt, auto_psv)) _ADC1Interrupt()
 {
-    _AD1IF = 0;
-    putVal(ADC1BUF0);
-    time_to_refresh += 1;
+    for (int count = 0; count < 8; count++) // average the 16 ADC value
+        {
+            putVal(*ADC16Ptr);
+            ADC16Ptr++;
+        }
+    
+    time_to_refresh = 1;
+    ADC16Ptr = &ADC1BUF0; // initialize ADC1BUF pointer
+    IFS0bits.AD1IF = 0; // clear ADC interrupt flag
 }
 
 
 void setup()
 {
-    initBuffer(4);
+    initBuffer();
     adc_init();
     lcd_init();
     lcd_moveCurser(0,0);
@@ -68,14 +74,15 @@ int main(int argc, char** argv) {
     setup();
     int adValue = getAvg();
     while(1){
-        if(time_to_refresh >= 4){
+        if(time_to_refresh){
             adValue = getAvg();
             sprintf(adStr, "%d", adValue);
             lcd_clear();            
-            delayMs(2);
+            delayMs(1);
             lcd_moveCurser(0,0);
             lcd_printStr(adStr);
             time_to_refresh = 0;
+            AD1CON1bits.ASAM = 1; // auto start sampling for 31Tad
         }
     }
 

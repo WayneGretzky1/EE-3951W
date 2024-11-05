@@ -14,9 +14,9 @@
 extern "C" {
 #endif
 
-void putVal(int newValue);
+void putVal(uint16_t newValue);
 int getAvg(void);
-void initBuffer();
+void initBuffer(void);
 
 #ifdef	__cplusplus
 }

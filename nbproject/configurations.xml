@@ -4,28 +4,10 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="MCC Generated Files"
-                     displayName="MCC Generated Files"
-                     projectFiles="true">
-        <itemPath>mcc_generated_files/adc1.h</itemPath>
-        <itemPath>mcc_generated_files/pin_manager.h</itemPath>
-        <itemPath>mcc_generated_files/system.h</itemPath>
-        <itemPath>mcc_generated_files/clock.h</itemPath>
-        <itemPath>mcc_generated_files/mcc.h</itemPath>
-        <itemPath>mcc_generated_files/traps.h</itemPath>
-        <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
-        <itemPath>mcc_generated_files/adc_module_features.h</itemPath>
-      </logicalFolder>
       <itemPath>previous_labs/ADC_example_BB/bye00035_adc_v001.h</itemPath>
       <itemPath>previous_labs/buffer_lib_NT/tonn0030_lab6_bufferLib_v001.h</itemPath>
       <itemPath>previous_labs/LCD_Lib_NT/tonn0030_lab5_lcdLib_v001.h</itemPath>
       <itemPath>previous_labs/delay_functions_NT/tonn0030_lab_asmLib_delayfuncs.h</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="true">
-      <itemPath>Makefile</itemPath>
-      <itemPath>WeightScale.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -34,23 +16,17 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="MCC Generated Files"
-                     displayName="MCC Generated Files"
-                     projectFiles="true">
-        <itemPath>mcc_generated_files/system.c</itemPath>
-        <itemPath>mcc_generated_files/clock.c</itemPath>
-        <itemPath>mcc_generated_files/where_was_i.s</itemPath>
-        <itemPath>mcc_generated_files/pin_manager.c</itemPath>
-        <itemPath>mcc_generated_files/mcc.c</itemPath>
-        <itemPath>mcc_generated_files/adc1.c</itemPath>
-        <itemPath>mcc_generated_files/traps.c</itemPath>
-        <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
-      </logicalFolder>
       <itemPath>previous_labs/ADC_example_BB/bye00035_adc_v001.c</itemPath>
       <itemPath>previous_labs/buffer_lib_NT/tonn0030_lab6_bufferLib_v001.c</itemPath>
       <itemPath>source_files/weightScale_main.c</itemPath>
       <itemPath>previous_labs/LCD_Lib_NT/tonn0030_lab5_lcdLib_v001.c</itemPath>
       <itemPath>previous_labs/delay_functions_NT/tonn0030_lab_asmLib_delayfuncs.s</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+      <itemPath>WeightScale.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -1303,8 +1279,6 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-abfb"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/ntonn/OneDrive/Documents/School stuff/_WeightScale/EE-3951W/debug/default/default_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
