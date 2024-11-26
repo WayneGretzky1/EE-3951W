@@ -37,6 +37,8 @@
  * Together you will use these functions to create and animate a message on the LCD display.
  */
 
+const uint16_t LUT[1024];
+
 volatile int test;
 volatile char time_to_refresh = 0;
 volatile uint16_t ADCValue = 0;
