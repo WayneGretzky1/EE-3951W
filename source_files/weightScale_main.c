@@ -9,6 +9,8 @@
 #include "../previous_labs/ADC_example_BB/bye00035_adc_v001.h"
 #include "../previous_labs/buffer_lib_NT/tonn0030_lab6_bufferLib_v001.h"
 #include "../previous_labs/LCD_Lib_NT/tonn0030_lab5_lcdLib_v001.h"
+#include "../previous_labs/servo.X/servo_setup.h"
+#include "../header_files/data.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -37,7 +39,6 @@
  * Together you will use these functions to create and animate a message on the LCD display.
  */
 
-const uint16_t LUT[1024];
 
 volatile int test;
 volatile char time_to_refresh = 0;
@@ -47,7 +48,7 @@ void __attribute__((interrupt, auto_psv)) _ADC1Interrupt()
 {
     for (int count = 0; count < 8; count++) // average the 16 ADC value
         {
-            putVal(*ADC16Ptr);
+            putVal(LUT[*ADC16Ptr]);
             ADC16Ptr++;
         }
     
@@ -62,6 +63,7 @@ void setup()
     initBuffer();
     adc_init();
     lcd_init();
+    servoSetup();
     lcd_moveCurser(0,0);
     TMR3 = 0;
     T3CON = 0;
@@ -74,17 +76,25 @@ void setup()
 int main(int argc, char** argv) {
     char adStr[20];
     setup();
-    int adValue = getAvg();
+    uint8_t waitCounter = 0;
+    int weight = getAvg();
     while(1){
         if(time_to_refresh){
-            adValue = getAvg();
-            sprintf(adStr, "%d", adValue);
+            weight = getAvg();
+            if(waitCounter >=2){
+                setScaleServo(weight);
+                waitCounter = 0;
+            }
+            sprintf(adStr, "%d", weight);
             lcd_clear();            
             delayMs(1);
             lcd_moveCurser(0,0);
             lcd_printStr(adStr);
+            lcd_moveCurser(0,4);
+            lcd_printChar('g');
             time_to_refresh = 0;
             AD1CON1bits.ASAM = 1; // auto start sampling for 31Tad
+            waitCounter++;
         }
     }
 

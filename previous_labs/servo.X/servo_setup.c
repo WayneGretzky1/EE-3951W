@@ -36,7 +36,7 @@ void servoSetup(void){                      //Servo basic setup
     T2CON = 0;                  //Stop timer and resets control register
     T2CONbits.TCKPS = 0b01;     //Pre-Scalar. 0b01 = 1:8 pre-scale (PG. 14-6)
     TMR2 = 0;                   //Clear contents of timer register
-    PR2 = 40000 - 1;            //Period register. Period is = PRx_value + 1
+    PR2 = 20000 - 1;            //Period register. Period is = PRx_value + 1
                                 //40000 cycles at 1:8 makes a 20 mil sec period
     T2CONbits.TON = 1;
     
@@ -70,5 +70,6 @@ void setServo(int val){
 }
 
 void setScaleServo(int weight){
-    setServo((int)(-4000*(weight/1024.0)+5000));
+    int servoVal = (-2000*(weight/1000.0)+2500);
+    setServo(servoVal);
 }

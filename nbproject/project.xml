@@ -14,6 +14,8 @@
                 <sourceRootElem>source_files</sourceRootElem>
                 <sourceRootElem>previous_labs/LCD_Lib_NT</sourceRootElem>
                 <sourceRootElem>previous_labs/delay_functions_NT</sourceRootElem>
+                <sourceRootElem>previous_labs/servo.X</sourceRootElem>
+                <sourceRootElem>header_files</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

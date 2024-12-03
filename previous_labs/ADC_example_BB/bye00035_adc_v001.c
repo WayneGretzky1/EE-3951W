@@ -10,8 +10,7 @@ void adc_init()
     AD1CHS &= 0x0000;
     AD1CHS |= 0b0101;  // Connect AN4 as positive input
     AD1CSSL = 0;
-    AD1CON3 = 0x0F00; // Sample time = 15Tad, Tad = Tcy
-    AD1CON3 |= 0b00111111;
+    AD1CON3 = 0x0F3F; // Sample time = 15Tad, Tad = Tcy
     AD1CON2 = 0x601C; // Set AD1IF after every 8 samples, Vrefs enabled 657, 313
     //AD1CON2 = 0x001C; // Set AD1IF after every 8 samples, Vcc and gnd
     AD1CON1bits.ADON = 1; // turn ADC ON
