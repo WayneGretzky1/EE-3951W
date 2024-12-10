@@ -76,15 +76,12 @@ void setup()
 int main(int argc, char** argv) {
     char adStr[20];
     setup();
-    uint8_t waitCounter = 0;
+    //uint8_t waitCounter = 0;
     int weight = getAvg();
     while(1){
         if(time_to_refresh){
             weight = getAvg();
-            if(waitCounter >=2){
-                setScaleServo(weight);
-                waitCounter = 0;
-            }
+            setScaleServo(weight);
             sprintf(adStr, "%d", weight);
             lcd_clear();            
             delayMs(1);
@@ -94,7 +91,6 @@ int main(int argc, char** argv) {
             lcd_printChar('g');
             time_to_refresh = 0;
             AD1CON1bits.ASAM = 1; // auto start sampling for 31Tad
-            waitCounter++;
         }
     }
 
